@@ -15,7 +15,13 @@ import { UserComponent } from './user/user.component';
 import { MapComponent } from './map/map.component';
 import { ReportComponent } from './report/report.component';
 
+import { GoogleMapsModule } from '@angular/google-maps'
 
+import { ChartModule } from '@syncfusion/ej2-angular-charts'; 
+
+import { CategoryService, ColumnSeriesService } from '@syncfusion/ej2-angular-charts';
+
+ 
 
 @NgModule({
   declarations: [
@@ -28,14 +34,16 @@ import { ReportComponent } from './report/report.component';
     ReportComponent
   ],
   imports: [
+    ChartModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    GoogleMapsModule
   ],
-  providers: [CustomerService],
+  providers: [CustomerService, CategoryService, ColumnSeriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
