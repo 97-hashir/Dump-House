@@ -7,8 +7,10 @@ import {CustomerService} from '../shared/customer.service';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-
-  constructor(private customerService: CustomerService) { }
+customerService : CustomerService;
+  constructor(public customerServices: CustomerService) { 
+  this.customerService = customerServices;
+  }
   customerArray=[];
   showDeletedMessage: boolean;
   searchText: string="";

@@ -10,7 +10,7 @@ export class CustomerService {
 
   constructor(private firebase:AngularFireDatabase) { }
 
-  customerList: AngularFireList<any>;
+  firebaseList: AngularFireList<any>;
 
   form=new FormGroup({
     $key:new FormControl(null),
@@ -24,13 +24,22 @@ export class CustomerService {
   });
 
   getCustomer(){
-    this.customerList= this.firebase.list('donations'); 
-    return this.customerList.snapshotChanges();
+    this.firebaseList= this.firebase.list('donations'); 
+    return this.firebaseList.snapshotChanges();
 
   }
+  getDonations(){
+    this.firebaseList= this.firebase.list('users'); 
+    return this.firebaseList.snapshotChanges();
 
+  }
+  getReports(){
+    this.firebaseList= this.firebase.list('reports'); 
+    return this.firebaseList.snapshotChanges();
+
+  }
   insertCustomer(customer){
-    this.customerList.push({
+    this.firebaseList.push({
          title:customer.title,
       description:customer.description,
       phone:customer.phone
@@ -42,7 +51,7 @@ export class CustomerService {
   }
 
   updateCustomer(customer){
-    this.customerList.update(customer.$key,{
+    this.firebaseList.update(customer.$key,{
       title:customer.title,
       description:customer.description,
       phone:customer.phone
@@ -50,7 +59,7 @@ export class CustomerService {
     });
   }
   deleteCustomer($key){
-    this.customerList.remove($key);
+    this.firebaseList.remove($key);
   }
 
 

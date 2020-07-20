@@ -8,7 +8,7 @@ import {CustomerService} from '../shared/customer.service';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor(private customerService:CustomerService) { }
+  constructor(public customerService:CustomerService) { }
   submitted:Boolean;
   showSuccessMessage: boolean;
   formControls=this.customerService.form.controls; 
