@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {CustomerService} from '../shared/customer.service';
+
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  customerService : CustomerService;
+  constructor(public customerServices: CustomerService) { 
+  this.customerService = customerServices;
   }
-
+ reportsArray = [];
+    ngOnInit() {
+      this.customerService.getReports().subscribe(
+              
+        list=>{
+          this.reportsArray=list.map(item=>{
+            return{
+              $key:item.key,
+              ...item.payload.val()
+  
+            };
+  
+          });
+        });
+    }
 }
