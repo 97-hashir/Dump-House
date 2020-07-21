@@ -2,15 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/helplayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Help">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -21,28 +21,29 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="#538F9C">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="230dp"
-                    android:orientation="vertical"
+                    android:background="@drawable/back"
                     android:gravity="center"
-                    android:background="@drawable/back">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="90dp"
                         android:layout_height="90dp"
-                        android:src="@drawable/icon"
                         android:layout_gravity="center"
-                        />
+                        android:src="@drawable/icon" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
                         android:text="Help Dashboard"
                         android:textColor="#ffffff"
-                        android:layout_gravity="center"
-                        android:textStyle="bold"
                         android:textSize="18sp"
-                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
 
                         />
 
@@ -51,152 +52,51 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="215dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="215dp"
                     android:layout_marginRight="10dp"
-                    >
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="135dp"
-                        android:orientation="horizontal"
                         android:layout_marginBottom="10dp"
-                        >
+                        android:orientation="horizontal">
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="1"
                             android:layout_gravity="center"
-                            android:layout_marginRight="5dp">
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/imageView1"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:src="@drawable/profile"
                                     android:layout_centerInParent="true"
-                                    android:id="@+id/imageView1"
+                                    android:src="@drawable/profile"
 
                                     />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="INSTRUCTION"
-                                    android:textSize="16sp"
                                     android:layout_below="@id/imageView1"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
-                                    android:layout_marginBottom="10dp"/>
+                                    android:layout_marginBottom="10dp"
+                                    android:text="INSTRUCTION"
+                                    android:textSize="16sp" />
+
                                 <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
                                     android:id="@+id/buttonInst"
-                                    android:background="@android:color/transparent"/>
-
-
-                            </RelativeLayout>
-
-
-                        </androidx.cardview.widget.CardView>
-
-
-
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="10dp"
-                        >
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:layout_marginRight="5dp">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/profile"
-                                    android:layout_centerInParent="true"
-                                    android:id="@+id/imageView2"
-
-                                    />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="FAQ"
-                                    android:textSize="16sp"
-                                    android:layout_below="@id/imageView2"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginBottom="10dp"/>
-                                <Button
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:id="@+id/buttonFaq"
-                                    android:background="@android:color/transparent"/>
-
-
-                            </RelativeLayout>
-
-
-                        </androidx.cardview.widget.CardView>
-
-
-
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="135dp"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="10dp"
-                        >
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:layout_marginRight="5dp">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/profile"
-                                    android:layout_centerInParent="true"
-                                    android:id="@+id/imageView3"
-
-                                    />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Contact Us"
-                                    android:textSize="16sp"
-                                    android:layout_below="@id/imageView3"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginBottom="10dp"/>
-                                <Button
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:id="@+id/buttonContact"
                                     android:background="@android:color/transparent" />
 
 
@@ -206,14 +106,109 @@
                         </androidx.cardview.widget.CardView>
 
 
+                    </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/profile"
+
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imageView2"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="FAQ"
+                                    android:textSize="16sp" />
+
+                                <Button
+                                    android:id="@+id/buttonFaq"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent" />
+
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
 
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/profile"
+
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imageView3"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Contact Us"
+                                    android:textSize="16sp" />
+
+                                <Button
+                                    android:id="@+id/buttonContact"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent" />
 
 
+                            </RelativeLayout>
 
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
 
 
                 </LinearLayout>
@@ -222,17 +217,10 @@
             </RelativeLayout>
 
 
-
         </LinearLayout>
 
 
-
-
-
     </ScrollView>
-
-
-
 
 
 </RelativeLayout>

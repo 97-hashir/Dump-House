@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("sign up", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
 
-                            if(!checked) {
+                            if(!checked) { //false
                                 addDonor(user.getUid());
                                 startActivity(i);
                             }
@@ -122,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
 
     @Override
     public void onStart() {

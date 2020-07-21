@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_recipient"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.dumphouse.ui.home_recipient.HomeRecipientFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.dumphouse.ui.recommendation.RecommendationFragment"
+        android:label="Recommendation"
+        tools:layout="@layout/fragment_recommendation" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.dumphouse.ui.report.ReportFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.dumphouse.ui.help.HelpFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.example.dumphouse.ui.logout.LogoutFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+</navigation>

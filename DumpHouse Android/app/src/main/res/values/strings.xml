@@ -14,8 +14,34 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="sign_up">Sign Up</string>
+    <string name="donor">Donor</string>
+    <string name="recipient">Recipient</string>
     <string name="sign_in_instead">Sign In instead</string>
     <string name="sign_in">SIGN IN</string>
     <string name="already_have_an_account">Already have an account</string>
     <string name="donate">Donate</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_home_donor">Home</string>
+    <string name="menu_gallery">Recommendation</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Report</string>
+    <string name="menu_share">Help</string>
+    <string name="menu_send">Logout</string>
+    <string name="asepticware">Asepticware</string>
+    <string name="ledger">Ledger</string>
+    <string name="communicate">Communicate</string>
+    <string name="add">Add</string>
+    <string name="saad">Saad</string>
+    <string name="malak">Malak</string>
+    <string name="todo">TODO</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="title_activity_recipient2">RecipientActivity2</string>
+    <string name="support_dumphouse_com">support@dumphouse.com</string>
+    <string name="title_activity_donor">DonorActivity</string>
 </resources>

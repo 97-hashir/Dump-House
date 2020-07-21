@@ -1,14 +1,17 @@
 package com.example.dumphouse;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class Contact_us extends AppCompatActivity {
+import androidx.fragment.app.FragmentActivity;
+
+public class FaqFragmentActivity extends FragmentActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us);
+        setContentView(R.layout.fragment_faq);
+
     }
 }
